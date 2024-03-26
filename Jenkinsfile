@@ -8,7 +8,7 @@ pipeline{
        
         stage('Testing Environment'){
             steps{
-            sh 'firebase deploy -P final-test-bf28d  --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P final-test-bf28d --token "$FIREBASE_DEPLOY_TOKEN"'
             
             }
         } 
@@ -24,7 +24,7 @@ pipeline{
         } 
         stage('Production Environment'){
             steps{
-            sh 'firebase deploy -P final-production-cbc00  --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P final-production-cbc00 --token "$FIREBASE_DEPLOY_TOKEN"'
             echo 'Production'
             }
         } 
